@@ -32,10 +32,10 @@ public final class GenerateData {
     }
 
     private static final Random r = new Random();
-    private static List<String> domains;
-    private static List<String> personNames;
-    private static List<DishName> dishNames;
-    private static List<PlaceName> placeNames;
+    private static final List<String> domains;
+    private static final List<String> personNames;
+    private static final List<DishName> dishNames;
+    private static final List<PlaceName> placeNames;
 
     static {
         personNames = readStrings(Paths.get("/Users/myrzabekrustamov/Documents/IT-Attractor/Java/7MonthReal/contrWork7Month/src/main/resources/static/data", "list-person"));
