@@ -6,7 +6,6 @@ import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
-import springfox.documentation.annotations.ApiIgnore;
 
 @RestController
 @RequestMapping("/foods")
@@ -16,7 +15,7 @@ public class FoodController {
 
     @GetMapping("/caffeeFoods/{caffeeId}")
     public Page<FoodDto> getFoodOfCaffee(@PathVariable("caffeeId") String caffeeId,
-                                         @ApiIgnore Pageable pageable) {
+                                         Pageable pageable) {
         return FoodDto.fromList(foodService.getFoodOfCaffee(caffeeId, pageable));
     }
 }

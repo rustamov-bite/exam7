@@ -8,7 +8,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import springfox.documentation.annotations.ApiIgnore;
 
 @RestController
 @RequestMapping("/caffees")
@@ -17,7 +16,7 @@ public class CaffeeController {
     private final CaffeeService caffeeService;
 
     @GetMapping("/allCaffees")
-    public Page<CaffeeDto> getAllCaffees(@ApiIgnore Pageable pageable) {
+    public Page<CaffeeDto> getAllCaffees(Pageable pageable) {
         return CaffeeDto.fromList(caffeeService.getCaffees(pageable));
     }
 }

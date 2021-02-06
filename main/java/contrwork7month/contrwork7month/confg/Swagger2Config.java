@@ -38,7 +38,7 @@ public class Swagger2Config extends WebMvcConfigurationSupport {
     public Docket productApi() {
         // настраиваем Swagger 2
         return new Docket(DocumentationType.SWAGGER_2).select()
-                .apis(RequestHandlerSelectors.basePackage("kz.attractorschool.lesson54lab.controller"))
+                .apis(RequestHandlerSelectors.basePackage("contrwork7month.contrwork7month.controllers"))
                 .paths(regex("/.*"))
                 .build();
     }
