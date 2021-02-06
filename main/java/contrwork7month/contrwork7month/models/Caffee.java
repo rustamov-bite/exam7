@@ -20,6 +20,4 @@ public class Caffee {
 
     private String name;
     private String description;
-
-
 }

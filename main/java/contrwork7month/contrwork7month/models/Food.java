@@ -23,5 +23,5 @@ public class Food {
     private String type;
     @DBRef
     private Caffee caffee;
-    private Integer price;
+    private double price;
 }
