@@ -2,6 +2,7 @@ package contrwork7month.contrwork7month.dto;
 
 import contrwork7month.contrwork7month.models.Food;
 import lombok.*;
+import org.springframework.data.domain.Page;
 
 @Data
 @Builder
@@ -15,6 +16,10 @@ public class FoodDto {
                 .type(food.getType())
                 .price(food.getPrice())
                 .build();
+    }
+
+    public static Page<FoodDto> fromList(Page<Food> foods) {
+        return foods.map(FoodDto::from);
     }
 
     private String id;

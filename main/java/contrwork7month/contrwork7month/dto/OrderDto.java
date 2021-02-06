@@ -6,6 +6,8 @@ import contrwork7month.contrwork7month.models.Order;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @Builder
@@ -18,6 +20,14 @@ public class OrderDto {
                 .food(order.getFood())
                 .localDate(order.getLocalDate())
                 .build();
+    }
+
+    public static List<OrderDto> fromList(List<Order> orders) {
+        List<OrderDto> orderDtos = new ArrayList<>();
+        for (Order order : orders) {
+            orderDtos.add(from(order));
+        }
+        return orderDtos;
     }
 
     private Client client;
