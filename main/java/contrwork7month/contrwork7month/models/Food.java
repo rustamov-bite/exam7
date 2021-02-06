@@ -2,6 +2,7 @@ package contrwork7month.contrwork7month.models;
 
 import lombok.*;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.UUID;
@@ -20,5 +21,7 @@ public class Food {
 
     private String name;
     private String type;
+    @DBRef
+    private Caffee caffee;
     private Integer price;
 }
