@@ -79,7 +79,7 @@ public class InitDatabase {
     }
 
     private void fillFood(Caffee caffee) {
-        for (int j = 0; j < 6; j++) {
+        for (int i = 0; i < 6; i++) {
             Random random = new Random();
             GenerateData.DishName dishName = GenerateData.randomDish();
             Food food = Food.builder()
